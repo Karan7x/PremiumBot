@@ -104,10 +104,10 @@ async def forcedjoined(c: Client, m: Message, tryag: str = ""):
                 )
                 return 0
             try:
-                u = await c.get_chat_member(-1001829070430, m.from_user.id)
+                u = await c.get_chat_member(-1001646772620, m.from_user.id)
             except FloodWait as fo:
                 await sleep(fo.value + 1)
-                u = await c.get_chat_member(-1001829070430, m.from_user.id)
+                u = await c.get_chat_member(-1001646772620, m.from_user.id)
             if u.status in (ChatMemberStatus.BANNED,
                             ChatMemberStatus.RESTRICTED):
                 await m.reply_text(
@@ -124,7 +124,7 @@ async def forcedjoined(c: Client, m: Message, tryag: str = ""):
                             ChatMemberStatus.RESTRICTED):
                 await m.reply_text(
                     text="Sorry, You are Banned!\nNow You Can't Use Me.",
-                    disable_web_page_preview=True,
+                    disable_web_page_preview=true,
                 )
                 return 0
             try:
@@ -149,7 +149,7 @@ async def forcedjoined(c: Client, m: Message, tryag: str = ""):
                     InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 2! ✅", url="https://t.me/Anime7x")
                 ],
                 [
-                    InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 3! ✅", url="https://t.me/OnLyFans_OnlYFap")
+                    InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 3! ✅", url="https://t.me/Movies7xMaiN")
                 ],
                 [
                     InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 4! ✅", url="https://t.me/Movies7x")
@@ -170,7 +170,7 @@ async def forcedjoined(c: Client, m: Message, tryag: str = ""):
                         InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 2! ✅", url="https://t.me/Anime7x")
                     ],
                     [
-                        InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 3! ✅", url="https://t.me/OnLyFans_OnlYFap")
+                        InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 3! ✅", url="https://t.me/Movies7xMaiN")
                     ],
                     [
                         InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 4! ✅", url="https://t.me/Movies7x")
@@ -180,7 +180,7 @@ async def forcedjoined(c: Client, m: Message, tryag: str = ""):
                     ],
                 ])
             await m.reply_text(
-                text="<b> » 🗃️ 𝖳𝗈 𝖺𝖼𝖼𝖾𝗌𝗌 𝖿𝗂𝗅𝖾𝗌,\n\n🌟 > 𝗃𝗈𝗂𝗇 𝗍𝗁𝖾 5 𝖼𝗁𝖺𝗇𝗇𝖾𝗅𝗌 𝗅𝗂𝗌𝗍𝖾𝖽 𝖻𝖾𝗅𝗈𝗐 < . 𝖠𝖿𝗍𝖾𝗋 𝗃𝗈𝗂𝗇𝗂𝗇𝗀, 𝗍𝗁𝖾 𝖻𝗈𝗍 𝗐𝗂𝗅𝗅 𝗉𝗋𝗈𝗏𝗂𝖽𝖾 𝗍𝗁𝖾 𝖿𝗂𝗅𝖾𝗌.\n\n»  🚀 𝖭𝖾𝖾𝖽 𝖿𝗂𝗅𝖾𝗌 𝖿𝖺𝗌𝗍? 𝖩𝗈𝗂𝗇 𝖿𝗈𝗅𝖽𝖾𝗋👇\n\n>>> https://telegram.me/addlist/oP5DNuM5kvtlYTc9 <<<  </b>",
+                text="<b> » 🗃️ 𝖳𝗈 𝖺𝖼𝖼𝖾𝗌𝗌 𝖿𝗂𝗅𝖾𝗌,\n\n🌟 > 𝗃𝗈𝗂𝗇 𝗍𝗁𝖾 5 𝖼𝗁𝖺𝗇𝗇𝖾𝗅𝗌 𝗅𝗂𝗌𝗍𝖾𝖽 𝖻𝖾𝗅𝗈𝗐 < . 𝖠𝖿𝗍𝖾𝗋 𝗃𝗈𝗂𝗇𝗂𝗇𝗀, 𝗍𝗁𝖾 𝖻𝗈𝗍 𝗐𝗂𝗅𝗅 𝗉𝗋𝗈𝗏𝗂𝖽𝖾 𝗍𝗁𝖾 𝖿𝗂𝗅𝖾𝗌.\n\n»  🚀 𝖭𝖾𝖾𝖽 𝖿𝗂𝗅𝖾𝗌 𝖿𝖺𝗌𝗍? 𝖩𝗈𝗂𝗇 𝖿𝗈𝗅𝖽𝖾𝗋👇\n\n>>> <<<  </b>",
                 reply_markup=mark,
             )
             return 0
