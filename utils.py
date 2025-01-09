@@ -74,165 +74,124 @@ async def is_subscribed(bot, query):
     return False
 
 
-# async def forcedjoined(c: Client, m: Message, tryag: str = ""):
-#     if m.chat.type != ChatType.PRIVATE:
-#         return 1
-#     with suppress(UserIsBlocked):
-#         try:
-#             try:
-#                 u = await c.get_chat_member(-1001680440476, m.from_user.id)
-#             except FloodWait as fo:
-#                 await sleep(fo.value + 1)
-#                 u = await c.get_chat_member(-1001680440476, m.from_user.id)
-#             if u.status in (ChatMemberStatus.BANNED,
-#                             ChatMemberStatus.RESTRICTED):
-#                 await m.reply_text(
-#                     text="Sorry, You are Banned!\nNow You Can't Use Me.",
-#                     disable_web_page_preview=True,
-#                 )
-#                 return 0
-#             try:
-#                 u = await c.get_chat_member(-1001673528398, m.from_user.id)
-#             except FloodWait as fo:
-#                 await sleep(fo.value + 1)
-#                 u = await c.get_chat_member(-1001673528398, m.from_user.id)
-#             if u.status in (ChatMemberStatus.BANNED,
-#                             ChatMemberStatus.RESTRICTED):
-#                 await m.reply_text(
-#                     text="Sorry, You are Banned!\nNow You Can't Use Me.",
-#                     disable_web_page_preview=True,
-#                 )
-#                 return 0
-#             try:
-#                 u = await c.get_chat_member(-1001646772620, m.from_user.id)
-#             except FloodWait as fo:
-#                 await sleep(fo.value + 1)
-#                 u = await c.get_chat_member(-1001646772620, m.from_user.id)
-#             if u.status in (ChatMemberStatus.BANNED,
-#                             ChatMemberStatus.RESTRICTED):
-#                 await m.reply_text(
-#                     text="Sorry, You are Banned!\nNow You Can't Use Me.",
-#                     disable_web_page_preview=True,
-#                 )
-#                 return 0
-#             try:
-#                 u = await c.get_chat_member(-1001487979336, m.from_user.id)
-#             except FloodWait as fo:
-#                 await sleep(fo.value + 1)
-#                 u = await c.get_chat_member(-1001487979336, m.from_user.id)
-#             if u.status in (ChatMemberStatus.BANNED,
-#                             ChatMemberStatus.RESTRICTED):
-#                 await m.reply_text(
-#                     text="Sorry, You are Banned!\nNow You Can't Use Me.",
-#                     disable_web_page_preview=true,
-#                 )
-#                 return 0
-#             try:
-#                 u = await c.get_chat_member(-1001668949698, m.from_user.id)
-#             except FloodWait as fo:
-#                 await sleep(fo.value + 1)
-#                 u = await c.get_chat_member(-1001668949698, m.from_user.id)
-#             if u.status in (ChatMemberStatus.BANNED,
-#                             ChatMemberStatus.RESTRICTED):
-#                 await m.reply_text(
-#                     text="Sorry, You are Banned!\nNow You Can't Use Me.",
-#                     disable_web_page_preview=True,
-#                 )
-#                 return 0
-#         except UserNotParticipant:
-#             if tryag:
-#                 mark = InlineKeyboardMarkup([
-#                     [
-#                         InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 1! ✅ ", url="https://t.me/Movies7xBoTs")
-#                     ],
-#                 [
-#                     InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 2! ✅", url="https://t.me/Anime7x")
-#                 ],
-#                 [
-#                     InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 3! ✅", url="https://t.me/Movies7xMaiN")
-#                 ],
-#                 [
-#                     InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 4! ✅", url="https://t.me/Movies7x")
-#                 ],
-#                 [
-#                     InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 5! ✅", url="https://t.me/DraMaLiNKz")
-#                 ],
-#                     [
-#                         InlineKeyboardButton("🔖 𝘾𝙝𝙚𝙘𝙠 𝙨𝙪𝙗𝙨𝙘𝙧𝙞𝙥𝙩𝙞𝙤𝙣 𝙨𝙩𝙖𝙩𝙪𝙨💠", url=tryag)
-#                     ]
-#                 ])
-#             else:
-#                 mark = InlineKeyboardMarkup([
-#                     [
-#                         InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 1! ✅", url="https://t.me/Movies7xBoTs")
-#                     ],
-#                     [
-#                         InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 2! ✅", url="https://t.me/Anime7x")
-#                     ],
-#                     [
-#                         InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 3! ✅", url="https://t.me/Movies7xMaiN")
-#                     ],
-#                     [
-#                         InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 4! ✅", url="https://t.me/Movies7x")
-#                     ],
-#                     [
-#                         InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 5! ✅", url="https://t.me/DraMaLiNKz")
-#                     ],
-#                 ])
-#             await m.reply_text(
-#                 text="<b> » 🗃️ 𝖳𝗈 𝖺𝖼𝖼𝖾𝗌𝗌 𝖿𝗂𝗅𝖾𝗌,\n\n🌟 > 𝗃𝗈𝗂𝗇 𝗍𝗁𝖾 5 𝖼𝗁𝖺𝗇𝗇𝖾𝗅𝗌 𝗅𝗂𝗌𝗍𝖾𝖽 𝖻𝖾𝗅𝗈𝗐 < . 𝖠𝖿𝗍𝖾𝗋 𝗃𝗈𝗂𝗇𝗂𝗇𝗀, 𝗍𝗁𝖾 𝖻𝗈𝗍 𝗐𝗂𝗅𝗅 𝗉𝗋𝗈𝗏𝗂𝖽𝖾 𝗍𝗁𝖾 𝖿𝗂𝗅𝖾𝗌.\n\n»  🚀 𝖭𝖾𝖾𝖽 𝖿𝗂𝗅𝖾𝗌 𝖿𝖺𝗌𝗍? 𝖩𝗈𝗂𝗇 𝖿𝗈𝗅𝖽𝖾𝗋👇\n\n>>> <<<  </b>",
-#                 reply_markup=mark,
-#             )
-#             return 0
-#         except RPCError:
-#             await m.reply_text(
-#                 text="Something went Wrong.",
-#                 disable_web_page_preview=True,
-#             )
-#             return 0
-#         return 1
-#     return 0
-
-#  chatgpt code
-from pyrogram import Client
-from pyrogram.errors import UserIsBlocked, FloodWait, RPCError
-from pyrogram.types import Message, ChatMemberStatus
-from asyncio import sleep
-
-
-async def forcedjoined(c: Client, m: Message):
-    if m.chat.type != "private":
+async def forcedjoined(c: Client, m: Message, tryag: str = ""):
+    if m.chat.type != ChatType.PRIVATE:
         return 1
-
-    # Directly return if user is restricted or banned (simplified)
-    try:
-        u = await c.get_chat_member(-1001680440476, m.from_user.id)
-        if u.status in (ChatMemberStatus.BANNED, ChatMemberStatus.RESTRICTED):
+    with suppress(UserIsBlocked):
+        try:
+            try:
+                u = await c.get_chat_member(-1001680440476, m.from_user.id)
+            except FloodWait as fo:
+                await sleep(fo.value + 1)
+                u = await c.get_chat_member(-1001680440476, m.from_user.id)
+            if u.status in (ChatMemberStatus.BANNED,
+                            ChatMemberStatus.RESTRICTED):
+                await m.reply_text(
+                    text="Sorry, You are Banned!\nNow You Can't Use Me.",
+                    disable_web_page_preview=True,
+                )
+                return 0
+            try:
+                u = await c.get_chat_member(-1001673528398, m.from_user.id)
+            except FloodWait as fo:
+                await sleep(fo.value + 1)
+                u = await c.get_chat_member(-1001673528398, m.from_user.id)
+            if u.status in (ChatMemberStatus.BANNED,
+                            ChatMemberStatus.RESTRICTED):
+                await m.reply_text(
+                    text="Sorry, You are Banned!\nNow You Can't Use Me.",
+                    disable_web_page_preview=True,
+                )
+                return 0
+            try:
+                u = await c.get_chat_member(-1001646772620, m.from_user.id)
+            except FloodWait as fo:
+                await sleep(fo.value + 1)
+                u = await c.get_chat_member(-1001646772620, m.from_user.id)
+            if u.status in (ChatMemberStatus.BANNED,
+                            ChatMemberStatus.RESTRICTED):
+                await m.reply_text(
+                    text="Sorry, You are Banned!\nNow You Can't Use Me.",
+                    disable_web_page_preview=True,
+                )
+                return 0
+            try:
+                u = await c.get_chat_member(-1001487979336, m.from_user.id)
+            except FloodWait as fo:
+                await sleep(fo.value + 1)
+                u = await c.get_chat_member(-1001487979336, m.from_user.id)
+            if u.status in (ChatMemberStatus.BANNED,
+                            ChatMemberStatus.RESTRICTED):
+                await m.reply_text(
+                    text="Sorry, You are Banned!\nNow You Can't Use Me.",
+                    disable_web_page_preview=true,
+                )
+                return 0
+            try:
+                u = await c.get_chat_member(-1001668949698, m.from_user.id)
+            except FloodWait as fo:
+                await sleep(fo.value + 1)
+                u = await c.get_chat_member(-1001668949698, m.from_user.id)
+            if u.status in (ChatMemberStatus.BANNED,
+                            ChatMemberStatus.RESTRICTED):
+                await m.reply_text(
+                    text="Sorry, You are Banned!\nNow You Can't Use Me.",
+                    disable_web_page_preview=True,
+                )
+                return 0
+        except UserNotParticipant:
+            if tryag:
+                mark = InlineKeyboardMarkup([
+                    [
+                        InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 1! ✅ ", url="https://t.me/Movies7xBoTs")
+                    ],
+                [
+                    InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 2! ✅", url="https://t.me/Anime7x")
+                ],
+                [
+                    InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 3! ✅", url="https://t.me/Movies7xMaiN")
+                ],
+                [
+                    InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 4! ✅", url="https://t.me/Movies7x")
+                ],
+                [
+                    InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 5! ✅", url="https://t.me/DraMaLiNKz")
+                ],
+                    [
+                        InlineKeyboardButton("🔖 𝘾𝙝𝙚𝙘𝙠 𝙨𝙪𝙗𝙨𝙘𝙧𝙞𝙥𝙩𝙞𝙤𝙣 𝙨𝙩𝙖𝙩𝙪𝙨💠", url=tryag)
+                    ]
+                ])
+            else:
+                mark = InlineKeyboardMarkup([
+                    [
+                        InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 1! ✅", url="https://t.me/Movies7xBoTs")
+                    ],
+                    [
+                        InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 2! ✅", url="https://t.me/Anime7x")
+                    ],
+                    [
+                        InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 3! ✅", url="https://t.me/Movies7xMaiN")
+                    ],
+                    [
+                        InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 4! ✅", url="https://t.me/Movies7x")
+                    ],
+                    [
+                        InlineKeyboardButton("🚀 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 5! ✅", url="https://t.me/DraMaLiNKz")
+                    ],
+                ])
             await m.reply_text(
-                text="Sorry, You are Banned!\nNow You Can't Use Me.",
+                text="<b> » 🗃️ 𝖳𝗈 𝖺𝖼𝖼𝖾𝗌𝗌 𝖿𝗂𝗅𝖾𝗌,\n\n🌟 > 𝗃𝗈𝗂𝗇 𝗍𝗁𝖾 5 𝖼𝗁𝖺𝗇𝗇𝖾𝗅𝗌 𝗅𝗂𝗌𝗍𝖾𝖽 𝖻𝖾𝗅𝗈𝗐 < . 𝖠𝖿𝗍𝖾𝗋 𝗃𝗈𝗂𝗇𝗂𝗇𝗀, 𝗍𝗁𝖾 𝖻𝗈𝗍 𝗐𝗂𝗅𝗅 𝗉𝗋𝗈𝗏𝗂𝖽𝖾 𝗍𝗁𝖾 𝖿𝗂𝗅𝖾𝗌.\n\n»  🚀 𝖭𝖾𝖾𝖽 𝖿𝗂𝗅𝖾𝗌 𝖿𝖺𝗌𝗍? 𝖩𝗈𝗂𝗇 𝖿𝗈𝗅𝖽𝖾𝗋👇\n\n>>> <<<  </b>",
+                reply_markup=mark,
+            )
+            return 0
+        except RPCError:
+            await m.reply_text(
+                text="Something went Wrong.",
                 disable_web_page_preview=True,
             )
             return 0
-    except Exception:
-        pass  # Ignore if any error occurs (no need to handle explicitly)
-
-    try:
-        u = await c.get_chat_member(-1001673528398, m.from_user.id)
-        if u.status in (ChatMemberStatus.BANNED, ChatMemberStatus.RESTRICTED):
-            await m.reply_text(
-                text="Sorry, You are Banned!\nNow You Can't Use Me.",
-                disable_web_page_preview=True,
-            )
-            return 0
-    except Exception:
-        pass  # Ignore if any error occurs (no need to handle explicitly)
-
-    # You can now skip any checks for the user's membership in other channels.
-    # The code now just ensures they are not banned/restricted without forcing a join.
-
-    return 1
-
-# chat gpt code
+        return 1
+    return 0
 
 
 async def get_poster(query, bulk=False, id=False, file=None):
@@ -968,7 +927,7 @@ async def send_all(bot, userid, files, ident, chat_id, user_name, query):
                                 InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
                                 InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                             ], [
-                            InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/Kgashok04")
+                            InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/Sensei7x")
                         ]
                         ]
                     )
